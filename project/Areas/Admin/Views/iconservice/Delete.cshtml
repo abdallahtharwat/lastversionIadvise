@@ -1,0 +1,176 @@
+﻿@model IconService
+
+<div class="container">
+    <div class="card shadow border-0 mt-4">
+        <div class="card-header bg-secondary bg-gradient ml-0 py-3">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="text-white py-2">Delete Service</h2>
+                </div>
+            </div>
+        </div>
+        <div class="card-body p-4">
+            <form method="post" class="row" enctype="multipart/form-data">
+
+
+                <div class="row">
+                    <div class="col-10">
+                        <div class="border p-3">
+                            <div asp-validation-summary="All"></div>
+                            <div class="form-floating py-2 col-12">
+                                <input asp-for="HomePageTitle" class="form-control border-0 shadow" />
+                                <label asp-for="HomePageTitle" class="ms-2"></label>
+                                <span asp-validation-for="HomePageTitle" class="text-danger"></span>
+                            </div>
+                            <div class="form-floating py-2 col-12">
+                                <input asp-for="HomePageDescription" class="form-control border-0 shadow" />
+                                <label asp-for="HomePageDescription" class="ms-2"></label>
+                                <span asp-validation-for="HomePageDescription" class="text-danger"></span>
+                            </div>
+                            <div class="form-floating py-2 col-12">
+                                <input asp-for="HomePageIcon" class="form-control border-0 shadow" />
+                                <label asp-for="HomePageIcon" class="ms-2"></label>
+                                <span asp-validation-for="HomePageIcon" class="text-danger"></span>
+                            </div>
+                            <div class="form-floating py-2 col-12">
+                                <input asp-for="BannerTitle" class="form-control border-0 shadow" />
+                                <label asp-for="BannerTitle" class="ms-2"></label>
+                                <span asp-validation-for="BannerTitle" class="text-danger"></span>
+                            </div>
+                            <div class="form-floating py-2 col-12">
+                                <input asp-for="Bannerimg" class="form-control border-0 shadow" />
+                                <label asp-for="Bannerimg" class="ms-2"></label>
+                                <span asp-validation-for="Bannerimg" class="text-danger"></span>
+                            </div>
+                            <div class="form-floating py-2 col-12">
+                                <input asp-for="MainTitle" class="form-control border-0 shadow" />
+                                <label asp-for="MainTitle" class="ms-2"></label>
+                                <span asp-validation-for="MainTitle" class="text-danger"></span>
+                            </div>
+                            <div class="form-floating py-2 col-12">
+                                <input asp-for="MainDescription" class="form-control border-0 shadow" />
+                                <label asp-for="MainDescription" class="ms-2"></label>
+                                <span asp-validation-for="MainDescription" class="text-danger"></span>
+                            </div>
+                            <div class="form-floating py-2 col-12">
+                                <input asp-for="ContentTitle" class="form-control border-0 shadow" />
+                                <label asp-for="ContentTitle" class="ms-2"></label>
+                                <span asp-validation-for="ContentTitle" class="text-danger"></span>
+                            </div>
+                            <div class="form-floating py-2 col-12">
+                                <input asp-for="ContentDescription" class="form-control border-0 shadow" />
+                                <label asp-for="ContentDescription" class="ms-2"></label>
+                                <span asp-validation-for="ContentDescription" class="text-danger"></span>
+                            </div>
+                            <div class="form-floating py-2 col-12">
+                                <input asp-for="ContentQuestion" class="form-control border-0 shadow" />
+                                <label asp-for="ContentQuestion" class="ms-2"></label>
+                                <span asp-validation-for="ContentQuestion" class="text-danger"></span>
+                            </div>
+                            <div class="form-floating py-2 col-12">
+                                <input asp-for="Contentimg" class="form-control border-0 shadow" />
+                                <label asp-for="Contentimg" class="ms-2"></label>
+                                <span asp-validation-for="Contentimg" class="text-danger"></span>
+                            </div>
+                            <div class="form-floating py-2 col-12">
+                                <input asp-for="ContentDescriptionfooter" class="form-control border-0 shadow" />
+                                <label asp-for="ContentDescriptionfooter" class="ms-2"></label>
+                                <span asp-validation-for="ContentDescriptionfooter" class="text-danger"></span>
+                            </div>
+                            <div class="form-floating py-2 col-12">
+                                <input asp-for="sectionTitle" class="form-control border-0 shadow" />
+                                <label asp-for="sectionTitle" class="ms-2"></label>
+                                <span asp-validation-for="sectionTitle" class="text-danger"></span>
+                            </div>
+                            <div class="form-floating py-2 col-12">
+                                <input asp-for="sectionDescription" class="form-control border-0 shadow" />
+                                <label asp-for="sectionDescription" class="ms-2"></label>
+                                <span asp-validation-for="sectionDescription" class="text-danger"></span>
+                            </div>
+                            <div class="form-floating py-2 col-12">
+                                <input asp-for="sectionTitle1" class="form-control border-0 shadow" />
+                                <label asp-for="sectionTitle1" class="ms-2"></label>
+                                <span asp-validation-for="sectionTitle1" class="text-danger"></span>
+                            </div>
+                            <div class="form-floating py-2 col-12">
+                                <input asp-for="sectionDescription1" class="form-control border-0 shadow" />
+                                <label asp-for="sectionDescription1" class="ms-2"></label>
+                                <span asp-validation-for="sectionDescription1" class="text-danger"></span>
+                            </div>
+                            <div class="form-floating py-2 col-12">
+                                <input asp-for="sectionimg1" class="form-control border-0 shadow" />
+                                <label asp-for="sectionimg1" class="ms-2"></label>
+                                <span asp-validation-for="sectionimg1" class="text-danger"></span>
+                            </div>
+                            <div class="form-floating py-2 col-12">
+                                <input asp-for="sectionTitle2" class="form-control border-0 shadow" />
+                                <label asp-for="sectionTitle2" class="ms-2"></label>
+                                <span asp-validation-for="sectionTitle2" class="text-danger"></span>
+                            </div>
+                            <div class="form-floating py-2 col-12">
+                                <input asp-for="sectionDescription2" class="form-control border-0 shadow" />
+                                <label asp-for="sectionDescription2" class="ms-2"></label>
+                                <span asp-validation-for="sectionDescription2" class="text-danger"></span>
+                            </div>
+                            <div class="form-floating py-2 col-12">
+                                <input asp-for="sectionimg2" class="form-control border-0 shadow" />
+                                <label asp-for="sectionimg2" class="ms-2"></label>
+                                <span asp-validation-for="sectionimg2" class="text-danger"></span>
+                            </div>
+                            <div class="form-floating py-2 col-12">
+                                <input asp-for="sectionTitle3" class="form-control border-0 shadow" />
+                                <label asp-for="sectionTitle3" class="ms-2"></label>
+                                <span asp-validation-for="sectionTitle3" class="text-danger"></span>
+                            </div>
+                            <div class="form-floating py-2 col-12">
+                                <input asp-for="sectionDescription3" class="form-control border-0 shadow" />
+                                <label asp-for="sectionDescription3" class="ms-2"></label>
+                                <span asp-validation-for="sectionDescription3" class="text-danger"></span>
+                            </div>
+                            <div class="form-floating py-2 col-12">
+                                <input asp-for="sectionimg3" class="form-control border-0 shadow" />
+                                <label asp-for="sectionimg3" class="ms-2"></label>
+                                <span asp-validation-for="sectionimg3" class="text-danger"></span>
+                            </div>
+
+                            <div class="row pt-2">
+                                <div class="col-6 col-md-3">
+                                    <button type="submit" class="btn btn-danger form-control">Delete</button>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a asp-controller="iconservice" asp-action="Index" class="btn btn-warning  form-control">
+                                        Back to List
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+@* _Validation for client side*@
+@section Scripts{
+
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+
+}
+
+
+
+
+
+
+

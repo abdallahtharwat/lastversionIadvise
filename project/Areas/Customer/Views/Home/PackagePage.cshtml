@@ -1,0 +1,102 @@
+﻿@model headerVM
+
+
+
+<section class="section-background">
+    <div class="container">
+        <h2 class="page-header text-white">
+            We offer a range of packages to suit the needs of different businesses. Check them out below
+        </h2>
+    </div> <!-- /.container -->
+</section> <!-- /.section-background -->
+
+<br />
+<br />
+
+
+<!-- FEATURES -->
+<!-- FEATURES -->
+<br />
+<br />
+
+<h1 class="text-center">Our Packages</h1>
+<br />
+<br />
+
+<section class="abdoo">
+
+
+    <div class="main-body">
+        <div class="container">
+            <div class="row gutters-sm">
+
+                @if (Model != null && Model.package != null && Model.package.Any())
+                {
+                    @foreach (var item in Model.package)
+                    {
+                        <div class="col-sm-6 col-xl-3 mb-3">
+                            <div class="card  border border-black">
+                                <div class="card-header border-bottom flex-column align-items-start p-3">
+                                    @Html.Raw(item.Content)
+
+                                    @Html.Raw(item.TitleHTML)
+
+                                    <p class="font-size-sm mb-0">@item.Description</p>
+                                </div>
+
+
+
+
+
+                                <div class="card-body">
+                                    <ul class="list-unstyled font-size-sm mb-0">
+
+                                        @if (Model != null && Model.packageContents.Where(e => item.Id == e.packagetId) != null && Model.packageContents.Any(e => item.Id == e.packagetId))
+                                        {
+                                            @foreach (var items in Model.packageContents.Where(e => item.Id == e.packagetId))
+                                            {
+
+
+                                                <li class="">
+                                                    @Html.Raw(items.Icon)     @Html.Raw(items.Title)
+                                                </li>
+
+
+
+                                            }
+
+                                        }
+
+
+                                    </ul>
+                                </div>
+                                <div class="card-footer justify-content-center p-3">
+                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Start Now </button>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                    }
+
+                }
+
+
+
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<br />
+<br />
+<partial name="_Footer" />

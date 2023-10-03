@@ -1,0 +1,46 @@
+﻿@*@model Feedback
+*@
+
+@model headerVM
+
+<!-- Section Background -->
+<section class="section-background" style="background-image: url('@Model.AboutUs.Image1.Replace('\\', '/')')">
+    <div class="container">
+        <h2 class="page-header text-white">
+            @Model.AboutUs.Title1
+        </h2>
+    </div> <!-- /.container -->
+</section> <!-- /.section-background -->
+<!-- about us  -->
+
+<section class="about-us">
+    <div class="row">
+        <div class="about-col">
+            <h1>  @Model.AboutUs.Title2</h1>
+            <p class="text-black">  @Model.AboutUs.Description</p>
+            <a class="btn btn-primary asp-controller="Home" asp-action="contactus">
+                Explore Now
+            </a>
+        </div>
+        <div class="about-col">
+            <img src="@Model.AboutUs.Image2" alt="">
+        </div>
+    </div>
+
+
+</section>
+
+
+
+
+
+
+<section class="cta">
+    <h1>   @Model.AboutUs.Title3</h1>
+    <a class="btnnn" asp-controller="Home" asp-action="contactus"> CONTACT US</a>
+</section>
+
+<br />
+<br />
+<br />
+<partial name="_Footer" />

@@ -1,0 +1,58 @@
+﻿@model Feedback
+
+
+<div class="form-wrap">
+    <form asp-action="ContactForm" method="POST" asp-route-language="en" id="contactusform">
+        @Html.AntiForgeryToken()
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <h2 class="form-title">Send us a message</h2>
+        <div class="form-fields">
+            <div class="form-group">
+                <input asp-for="FName" type="text" class="name" placeholder="First Name">
+                <small><span asp-validation-for="FName" class="form-text text-danger"></span></small>
+            </div>
+            <div class="form-group">
+                <input asp-for="LName" type="text" class="lname" placeholder="Last Name">
+                  <small><span asp-validation-for="LName" class="form-text text-danger"></span></small>
+              </div>
+            <div class="form-group">
+                <input asp-for="Email" type="email" class="email" placeholder="Example@gmail.com">
+@*                <small><span asp-validation-for="Email" class="form-text text-danger"></span></small>
+*@            </div>
+            @*                    <div class="form-group">
+            <input asp-for="package" type="text" class="package" placeholder="The Package you need">
+
+            </div>*@
+            <div class="form-group">
+                <input asp-for="BusinessActivity" type="text" class="BusinessActivity" placeholder=" your Business Activity">
+
+            </div>
+
+            <select asp-for="package" class="form-group">
+                <option disabled selected>-Select Package-</option>
+                <option>Premium Package</option>
+                <option>  Privilege Package</option>
+                <option>Elite Package</option>
+            </select>
+
+            <div class="form-group">
+                <input asp-for="Mobile" type="number" class="phone" placeholder="Phone">
+                 <small><span asp-validation-for="Mobile" class="form-text text-danger"></span></small>
+              </div>
+            <div class="form-group">
+                <textarea asp-for="Message" placeholder="Write your message"></textarea>
+                <small><span asp-validation-for="Message" class="form-text text-danger"></span></small>
+            </div>
+        </div>
+        <div class="form-group col-12">
+            <input id="g-recaptcha-response" name="g-recaptcha-response" type="hidden" value="">
+        </div>
+        <button type="submit" id="contactusbutton" class="submit-button   ">Send Message </button>
+        <!-- <button type="button" class="btn btn-danger btn-lg btn-block" onclick="sendMail()">Contact Us</button> -->
+
+    </form>
+</div>
+
+
+

@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Featuretest>
+
+@{
+
+    ViewData["Title"] = "Feature List";
+}
+
+
+<div class="content-wrapper">
+    <div class="page-title">
+        <span class="title-data" Feature List </span>
+    </div>
+    <div class="project__items bg-white p-4 shadow">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 internal_page">
+
+                <div class="card-body">
+                    <a  asp-controller="FeatureTest"   asp-action="Create" class="btn btn-primary my_btn btn-create btn-sm">Create</a>
+                    <table class="table table-striped table-bordered datatable" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Id)
+                                </th>
+
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Title)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Description)
+                                </th>
+
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Id)
+                                    </td>
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Title)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Description)
+                                    </td>
+                                    <td>
+                                        <div class="dropdown data-table-dropdown">
+                                            <button type="button" class="btn btn-sm btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                Action
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" asp-controller="FeatureTest" asp-action="Edit" asp-route-id="@item.Id"> Edit </a>
+                                                <a class="dropdown-item" onclick='DeleteRow("/Admin/@Html.Controller()/JsonDelete/@item.Id")'> Delete </a>
+                                                <a class="dropdown-item Duplicate" onclick='DuplicateRow("/Admin/@Html.Controller()/JsonDuplicate/@item.Id")'> Duplicate </a>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

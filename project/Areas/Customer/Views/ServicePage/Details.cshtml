@@ -1,0 +1,153 @@
+﻿@*@model Feedback*@
+
+@model NewServiceVM
+
+
+<!-- Section Background -->
+<section class="section-background" style="background-image: url('@Model.iconService.Bannerimg.Replace('\\', '/')')">
+    <div class="container">
+        <h2 class="page-header text-white">
+            @Model.iconService.BannerTitle
+        </h2>
+
+    </div> <!-- /.container -->
+</section> <!-- /.section-background -->
+
+
+<section class="features section-wrapper">
+    <div class="container">
+        <h2 class="section-title text-center">
+            @Model.iconService.MainTitle
+        </h2>
+        <p class="section-subtitle text-center">
+            @Model.iconService.MainDescription
+        </p>
+
+
+
+        <section class="row w-100 py-0 bg-light" id="features">
+            <div class="col-lg-6 col-img karim" style="background-image: url('@Model.iconService.Contentimg.Replace('\\', '/')')"></div>
+            <div class="col-lg-6 py-5">
+                <div class="container containerr">
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <h6 class="text-primary"></h6>
+                            <h2>  @Model.iconService.ContentTitle</h2>
+                            <p class="teto"> @Model.iconService.ContentDescription</p>
+
+                            <div class="feature d-flex mt-5">
+                                <div class=" me-3">
+                                </div>
+                                <div>
+                                    <h5> @Model.iconService.ContentQuestion </h5>
+                                </div>
+                            </div>
+
+
+
+                            @foreach (var items in Model.servicepointfeature.Where(e => Model.iconService.Id == e.iconserviceId))
+                            {
+
+
+                                <div class="feature d-flex">
+                                    <div class=" me-3">
+                                    </div>
+                                    <div>
+                                        <h5> @Html.Raw(items.Icon)  @items.Title</h5>
+                                        <p class="teto">  @items.Description</p>   
+                                    </div>
+                                </div>
+
+                            }
+
+                            <p class="teto">
+                               
+                              <br />  @Model.iconService.ContentDescriptionfooter
+                            </p>
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- /.row -->
+    </div> <!-- /.container -->
+</section> <!-- /.features -->
+
+<br />
+<br />
+<br />
+
+
+
+
+
+
+
+<!---------- campus  -------->
+
+<section class="campuss">
+    <div class="campus">
+        <h1 class="text-white"> @Model.iconService.sectionTitle</h1>
+        <p class="text-white"> @Model.iconService.sectionDescription </p>
+        <br />
+        <div class="row">
+            <div class="campus-col">
+                <img src=" @Model.iconService.sectionimg1" alt="">
+                <div class="layer">
+                    <p class=""> @Model.iconService.sectionTitle1 <br />  <br /> @Model.iconService.sectionDescription1 <br />  <br />  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Start Now </button> </p>
+
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="@Model.iconService.sectionimg2" alt="">
+                <div class="layer">
+                    <p class="">
+                        @Model.iconService.sectionTitle2 <br />  <br />@Model.iconService.sectionDescription2
+                        <br />  <br />  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Start Now </button>
+                    </p>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="@Model.iconService.sectionimg3" alt="">
+                <div class="layer">
+                    <p class="">@Model.iconService.sectionTitle3 <br />  <br />@Model.iconService.sectionDescription3 <br />  <br />  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Start Now </button> </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<br />
+<br />
+<br />
+
+
+
+
+<!-- call to action-->
+
+
+<section class="cta">
+    <h1> Our Team will get back to you within 24 hours <br>From anywhere in the world</h1>
+    <a class="btnnn" asp-controller="Home" asp-action="contactus"> CONTACT US</a>
+</section>
+
+<br />
+<br />
+<br />
+
+
+<partial name="_Footer" />
+

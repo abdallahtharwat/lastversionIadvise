@@ -1,0 +1,109 @@
+﻿@model headerVM
+
+
+<!-- Section Background -->
+<section class="section-background">
+	<div class="container">
+		<h2 class="page-header text-white">
+			Get in touch with us
+		</h2>
+	</div> <!-- /.container -->
+</section> <!-- /.section-background -->
+
+<br />
+<br />
+
+
+
+<section id="section-wrapper">
+	<h1 class="text-center">@Model.contactus.FormTitle</h1>
+	<div class="box-wrapper">
+		<div class="info-wrap">
+			<h2 class="info-title">@Model.contactus.FormTitle</h2>
+			<h3 class="info-sub-title">@Model.contactus.FormDescription</h3>
+			<ul class="info-details">
+				<li>
+					<i class='bx bxl-whatsapp'></i>
+					<span></span> <a href="tel:+971 50 255 9262">@Model.contactus.PhoneNumber</a>
+				</li>
+				<li>
+					<i class='bx bx-envelope'></i>
+					<span></span> <a href="mailto:info@iadvise.vip">@Model.contactus.Email</a>
+				</li>
+				<li>
+					<i class='bx bx-globe'></i>
+					<span></span> <a href="https://www.google.com/maps?q=IFZA+DDP+Building+A2+-+OasisIndustrial+Area+-+Industrial+Area+-+Dubai&ftid=0x3e5f6570d49d452f:0x5993cfcf524af8a7&hl=en-AE&gl=ae&coh=179582&entry=gps&lucs=,47068303,47071704&g_ep=CAISBjYuNzQuMhgAINeCAyoSLDQ3MDY4MzAzLDQ3MDcxNzA0QgJBRQ%3D%3D&g_st=iw">@Model.contactus.Address</a>
+				</li>
+			</ul>
+			<ul class="social-icons">
+				<li><a href="@Model.contactus.Facebook"><i class='bx bxl-facebook-circle'></i></a></li>
+				<li>
+					<a href="@Model.contactus.Instagram"><i class='bx bxl-instagram'></i></a>
+				</li>
+				<li>
+					<a href="@Model.contactus.LinkedIn"><i class='bx bxl-linkedin'></i></a>
+				</li>
+			</ul>
+		</div>
+
+        <partial name="_FeedBack" model="@(new Feedback())" />
+
+
+    </div>
+</section>
+
+<br />
+<br />
+<br />
+
+<section class="contacts section-wrapper">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="contact">
+					<div class="contact-icon">
+						<i class="bi bi-globe"></i>
+					</div>
+					<div class="contact-name">
+						Address
+					</div>
+					<div class="contact-detail">
+						<a href="https://www.google.com/maps?q=IFZA+DDP+Building+A2+-+OasisIndustrial+Area+-+Industrial+Area+-+Dubai&ftid=0x3e5f6570d49d452f:0x5993cfcf524af8a7&hl=en-AE&gl=ae&coh=179582&entry=gps&lucs=,47068303,47071704&g_ep=CAISBjYuNzQuMhgAINeCAyoSLDQ3MDY4MzAzLDQ3MDcxNzA0QgJBRQ%3D%3D&g_st=iw">@Model.contactus.Address</a>
+					</div>
+				</div> <!-- /.contact -->
+			</div> <!-- /.col-sm-4 -->
+			<div class="col-sm-4">
+				<div class="contact">
+					<div class="contact-icon">
+						<i class="bi bi-telephone"></i>
+					</div>
+					<div class="contact-name">
+						Phone
+					</div>
+					<div class="contact-detail">
+						<a href="tel:@Model.contactus.PhoneNumber">@Model.contactus.PhoneNumber</a>
+					</div>
+				</div> <!-- /.contact -->
+			</div> <!-- /.col-sm-4 -->
+			<div class="col-sm-4">
+				<div class="contact">
+					<div class="contact-icon">
+						<i class="bi bi-envelope"></i>
+					</div>
+					<div class="contact-name">
+						Email Address
+					</div>
+					<div class="contact-detail">
+
+						<a href="mailto: @Model.contactus.PhoneNumber">@Model.contactus.Email</a>
+					</div>
+				</div> <!-- /.contact -->
+			</div> <!-- /.col-sm-4 -->
+		</div> <!-- /.row -->
+	</div> <!-- /.container -->
+</section> <!-- /.contacts -->
+
+<br />
+<br />
+<br />
+<partial name="_Footer" />
